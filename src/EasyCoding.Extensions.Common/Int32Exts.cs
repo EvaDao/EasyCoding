@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EasyCoding
 {
@@ -11,9 +7,7 @@ namespace EasyCoding
         public static int ToInt32(this object value)
         {
             if (value == null) return default(int);
-            var str = value.ToString();
-            int.TryParse(str, out var result);
-            return result;
+            return Convert.ToInt32(value);
         }
 
         public static int? ToNullableInt32(this object value)
@@ -30,5 +24,8 @@ namespace EasyCoding
             int.TryParse(value, out var result);
             return result;
         }
+
+        public static int Fallback(this int? value, int fallbackValue)
+            => value ?? fallbackValue;
     }
 }

@@ -32,5 +32,8 @@
 
             return value.Substring(startIndex);
         }
+
+        public static string Fallback(this string value, string fallbackValue)
+            => value ?? fallbackValue;
     }
 }

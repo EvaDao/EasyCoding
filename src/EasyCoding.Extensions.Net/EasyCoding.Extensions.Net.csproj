@@ -7,6 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="..\EasyCoding.Extensions.Common\EnumExt.cs" Link="EnumExt.cs" />
+    <Compile Include="..\EasyCoding.Extensions.Common\Int32Exts.cs" Link="Int32Exts.cs" />
+    <Compile Include="..\EasyCoding.Extensions.Common\StringExts.cs" Link="StringExts.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.CodeAnalysis.NetAnalyzers" Version="6.0.0">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
